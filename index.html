@@ -6,6 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            .two-column-layout {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2em;
+            }
+            .main-content {
+                flex-basis: 70%;
+                max-width: 70%;
+            }
+            .sidebar {
+                flex-basis: 25%;
+                max-width: 25%;
+            }
+            @media screen and (max-width: 980px) {
+                .main-content, .sidebar {
+                    flex-basis: 100%;
+                    max-width: 100%;
+                }
+            }
+        </style>
     </head>
     <body class="is-preload">
         <div id="wrapper">
@@ -45,8 +66,8 @@
                                 <p></p>
                             </header>
 
-                            <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-                                <div style="flex-basis: 70%; max-width: 70%;">
+                            <div class="two-column-layout">
+                                <div class="main-content">
                                     <section class="tiles">
                                         <article class="style1">
                                             <span class="image">
@@ -182,17 +203,8 @@
                                         </article>
                                     </section>
                                 </div>
-                                <div style="flex-basis: 25%; max-width: 25%;">
-                                    <div style="background-color:#2a2f36; padding:1em; margin-bottom: 1em; text-align:center;">
-                                        <p>Ad Placeholder 1</p>
+                                <div class="sidebar">
                                     </div>
-                                    <div style="background-color:#2a2f36; padding:1em; margin-bottom: 1em; text-align:center;">
-                                        <p>Ad Placeholder 2</p>
-                                    </div>
-                                    <div style="background-color:#2a2f36; padding:1em; text-align:center;">
-                                        <p>Ad Placeholder 3</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
