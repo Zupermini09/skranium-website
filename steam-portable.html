@@ -6,6 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            .two-column-layout {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2em;
+            }
+            .main-content {
+                flex-basis: 70%;
+                max-width: 70%;
+            }
+            .sidebar {
+                flex-basis: 25%;
+                max-width: 25%;
+            }
+            @media screen and (max-width: 980px) {
+                .main-content, .sidebar {
+                    flex-basis: 100%;
+                    max-width: 100%;
+                }
+            }
+        </style>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7409564370575653"
      crossorigin="anonymous"></script>
     </head>
@@ -39,28 +60,37 @@
 
                 <div id="main">
                         <div class="inner">
-                            <h1>How to Get Steam Portable on Any PC</h1>
-                            
-                            <p>This tutorial shows you how to install a portable version of Steam on any Windows PC without needing administrator access, Command Prompt, or a .bat file. This is perfect for school computers or public PCs where you don't have full control.</p>
-                            
-                            <div style="background-color: #ffc400; color: #333; padding: 1em; border-radius: 8px; margin: 2em 0; text-align: center;">
-                                <h3>⚠️ Important Notice</h3>
-                                <p style="margin:0;">
-                                    Due to the administrator limitations on some computers, certain games may not work. This is usually because they require additional software (like DirectX or Visual C++ Redistributables) that cannot be installed without admin rights.
-                                </p>
-                            </div>
+                            <header>
+                                <h1>How to Get Steam Portable on Any PC</h1>
+                            </header>
 
-                            <div style="text-align:center; margin: 2em 0;">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
+                            <div class="two-column-layout">
+                                <div class="main-content">
+                                    <p>This tutorial shows you how to install a portable version of Steam on any Windows PC without needing administrator access, Command Prompt, or a .bat file. This is perfect for school computers or public PCs where you don't have full control.</p>
+                                    
+                                    <div style="background-color: #ffc400; color: #333; padding: 1em; border-radius: 8px; margin: 2em 0; text-align: center;">
+                                        <h3>⚠️ Important Notice</h3>
+                                        <p style="margin:0;">
+                                            Due to the administrator limitations on some computers, certain games may not work. This is usually because they require additional software (like DirectX or Visual C++ Redistributables) that cannot be installed without admin rights.
+                                        </p>
+                                    </div>
 
-                            <h2 style="margin-top:2em;">Step-by-Step Guide</h2>
-                            <ol>
-                                <li><strong>Go to Google Drive:</strong> Click this link to download the Steam portable file from Google Drive: <a href="https://drive.google.com/file/d/1ExGd0CjSMwfx-FB5mCu_NJIIg38Iz2jN/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download Steam Portable</a></li>
-                                <li><strong>Extract the Files:</strong> Use a program like 7-Zip or WinRAR to extract the contents of the installer file to a folder on your USB drive or a local drive.</li>
-                                <li><strong>Run the Exe:</strong> Inside the extracted folder, find the Steam executable and run it. You should now have a portable version of Steam without needing an installation.</li>
-                                <li><strong>(Optional) Create a Shortcut:</strong> Right-click on the Steam executable, select 'Create shortcut', and drag the new shortcut to your desktop.</li>
-                            </ol>
+                                    <div style="text-align:center; margin: 2em 0;">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+
+                                    <h2 style="margin-top:2em;">Step-by-Step Guide</h2>
+                                    <ol>
+                                        <li><strong>Go to Google Drive:</strong> Click this link to download the Steam portable file from Google Drive: <a href="https://drive.google.com/file/d/1ExGd0CjSMwfx-FB5mCu_NJIIg38Iz2jN/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download Steam Portable</a></li>
+                                        <li><strong>Extract the Files:</strong> Use a program like 7-Zip or WinRAR to extract the contents of the installer file to a folder on your USB drive or a local drive.</li>
+                                        <li><strong>Run the Exe:</strong> Inside the extracted folder, find the Steam executable and run it. You should now have a portable version of Steam without needing an installation.</li>
+                                        <li><strong>(Optional) Create a Shortcut:</strong> Right-click on the Steam executable, select 'Create shortcut', and drag the new shortcut to your desktop.</li>
+                                    </ol>
+                                </div>
+                                <div class="sidebar">
+                                    <p>Annonser vil vises her</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
