@@ -169,11 +169,7 @@
                                     </div>
                                     
                                     <div id="custom-section" class="fields" style="display:none;">
-                                        <div class="field">
-                                            <label for="custom-grams">Estimated Grams</label>
-                                            <input type="number" name="custom-grams" id="custom-grams" placeholder="Enter grams of filament" min="1" required />
                                         </div>
-                                    </div>
                                     
                                     <div class="field">
                                         <label for="grams">Estimated Grams</label>
@@ -227,7 +223,7 @@
             // --- PRICING & COLOR CONFIGURATION ---
             // You can easily edit these values
             const PRICING = {
-                pricePerGram: 0.25, // The new cost per gram of filament in kr
+                pricePerGram: 0.25, // The cost per gram of filament in kr
                 makerworldHandling: 25, // The handling fee for a MakerWorld print in kr
                 customHandling: 35 // The higher handling fee for a custom print in kr
             };
@@ -324,14 +320,11 @@
                     handling = PRICING.customHandling;
                 }
 
-                // Calculate the final price
                 const totalCost = (grams * PRICING.pricePerGram) + handling;
 
-                // Display the result
                 resultText.textContent = `${grams}g in ${selectedColor} will cost approximately ${totalCost.toFixed(2)} kr.`;
                 resultBox.style.display = 'block';
 
-                // Set up the order button link
                 const subject = `3D Print Order from ${userName}`;
                 const body = `Hello Emilian,\n\nI would like to order a 3D print.\n\n--- Order Details ---\n\nName: ${userName}\nAddress: ${userAddress}\nPrint Type: ${printType}\nColor: ${selectedColor}\nEstimated Grams: ${grams}g\nTotal Price: ${totalCost.toFixed(2)} kr\n${printType === 'makerworld' ? 'MakerWorld Link: ' + makerworldLink + '\n' : ''}\nThank you!`;
                 orderButton.href = `mailto:support@skranium.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
