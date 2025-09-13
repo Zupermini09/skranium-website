@@ -165,6 +165,7 @@
                                         <div class="field">
                                             <label for="makerworld-link">MakerWorld Link</label>
                                             <input type="url" name="makerworld-link" id="makerworld-link" placeholder="Paste MakerWorld URL here" />
+                                            <small>Go to MakerWorld.com, find your model, and copy the URL from your browser's address bar.</small>
                                         </div>
                                     </div>
                                     
@@ -174,6 +175,7 @@
                                     <div class="field">
                                         <label for="grams">Estimated Grams</label>
                                         <input type="number" name="grams" id="grams" placeholder="Enter grams of filament" min="1" required />
+                                        <small>You can find this on the model's page on MakerWorld or in your slicer software.</small>
                                     </div>
                                     
                                     <div class="field">
@@ -230,7 +232,7 @@
 
             const COLORS = [
                 { name: 'Black', hex: '#000000', stock: 'Y' },
-                { name: 'Transparent', hex: '#ffffff', stock: 'Y', text: 'white' }, // Add 'text: 'white'' for better visibility on dark backgrounds
+                { name: 'Transparent', hex: '#ffffff', stock: 'Y', text: 'white' },
                 { name: 'Orange', hex: '#ff7f00', stock: 'Y' },
                 { name: 'Yellow', hex: '#f9d342', stock: 'Y' },
                 { name: 'White', hex: '#f0f0f0', stock: 'Y' },
