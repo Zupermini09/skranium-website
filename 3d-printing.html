@@ -143,8 +143,7 @@
                         </div>
 
                         <div class="sidebar">
-                            <!-- Paste your Google AdSense code here to autoplace ads -->
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -159,7 +158,7 @@
                         </ul>
                     </section>
                     <ul class="copyright">
-                        <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="https://www.youtube.com/@Zupemini09_">Mini</a></li>
+                        <li>© Untitled. All rights reserved</li><li>Design: <a href="https://www.youtube.com/@Zupemini09_">Mini</a></li>
                     </ul>
                 </div>
             </footer>
@@ -173,6 +172,11 @@
             const printTypeRadios = document.querySelectorAll('input[name="print-type"]');
             const resultBox = document.getElementById('result');
             const resultText = document.getElementById('result-text');
+
+            // --- PRICING CONFIGURATION ---
+            const PRICE_PER_GRAM = 0.3; // The cost per gram of filament
+            const MAKERWORLD_HANDLING = 10; // The handling fee for a MakerWorld print
+            const CUSTOM_HANDLING = 20; // The higher handling fee for a custom print
 
             // Listen for changes in the radio buttons to switch form sections
             printTypeRadios.forEach(radio => {
@@ -197,13 +201,10 @@
                 let printType = document.querySelector('input[name="print-type"]:checked').value;
 
                 if (printType === 'makerworld') {
-                    // This is a simulated 'scan' of the MakerWorld link
-                    // In a real-world scenario, a backend would fetch this data
-                    // For this example, we'll use a placeholder value
                     const makerworldLink = document.getElementById('makerworld-link').value;
                     if (makerworldLink) {
                         grams = 200; // Placeholder grams for a MakerWorld model
-                        handling = 15; // Handling fee for a MakerWorld model
+                        handling = MAKERWORLD_HANDLING;
                     } else {
                         resultText.textContent = "Please enter a MakerWorld link.";
                         resultBox.style.display = 'block';
@@ -216,12 +217,11 @@
                         resultBox.style.display = 'block';
                         return;
                     }
-                    handling = 25; // Higher handling fee for a custom print
+                    handling = CUSTOM_HANDLING;
                 }
 
                 // Calculate the final price
-                const pricePerGram = 0.3;
-                const totalCost = (grams * pricePerGram) + handling;
+                const totalCost = (grams * PRICE_PER_GRAM) + handling;
 
                 // Display the result
                 resultText.textContent = `${grams}g will cost approximately ${totalCost.toFixed(2)} kr.`;
@@ -229,8 +229,7 @@
             });
         </script>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/browser.min.js"></script>
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
