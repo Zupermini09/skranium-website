@@ -143,7 +143,8 @@
                         </div>
 
                         <div class="sidebar">
-                            </div>
+                            <!-- Paste your Google AdSense code here to autoplace ads -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,13 +159,18 @@
                         </ul>
                     </section>
                     <ul class="copyright">
-                        <li>© Untitled. All rights reserved</li><li>Design: <a href="https://www.youtube.com/@Zupemini09_">Mini</a></li>
+                        <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="https://www.youtube.com/@Zupemini09_">Mini</a></li>
                     </ul>
                 </div>
             </footer>
         </div>
 
         <script>
+            // --- PRICING CONFIGURATION (Change these values) ---
+            const PRICE_PER_GRAM = 0.3; // The cost per gram of filament in kr
+            const MAKERWORLD_HANDLING = 15; // The handling fee for a MakerWorld print in kr
+            const CUSTOM_HANDLING = 25; // The higher handling fee for a custom print in kr
+
             // Get references to DOM elements
             const form = document.getElementById('printing-form');
             const makerworldSection = document.getElementById('makerworld-section');
@@ -172,11 +178,6 @@
             const printTypeRadios = document.querySelectorAll('input[name="print-type"]');
             const resultBox = document.getElementById('result');
             const resultText = document.getElementById('result-text');
-
-            // --- PRICING CONFIGURATION ---
-            const PRICE_PER_GRAM = 0.3; // The cost per gram of filament
-            const MAKERWORLD_HANDLING = 10; // The handling fee for a MakerWorld print
-            const CUSTOM_HANDLING = 20; // The higher handling fee for a custom print
 
             // Listen for changes in the radio buttons to switch form sections
             printTypeRadios.forEach(radio => {
@@ -201,6 +202,8 @@
                 let printType = document.querySelector('input[name="print-type"]:checked').value;
 
                 if (printType === 'makerworld') {
+                    // In a real scenario, this is where a backend would fetch data
+                    // For this example, we'll use a placeholder value
                     const makerworldLink = document.getElementById('makerworld-link').value;
                     if (makerworldLink) {
                         grams = 200; // Placeholder grams for a MakerWorld model
@@ -229,7 +232,8 @@
             });
         </script>
 
-        <script src="assets/js/jquery.min.js"></script>
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/browser.min.js"></script>
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
